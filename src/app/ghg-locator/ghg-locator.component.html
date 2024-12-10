@@ -1,0 +1,40 @@
+<div class="header MuiPaper-elevation4">
+    <div class="MuiToolbar-root MuiToolbar-regular MuiToolbar-gutters">
+        <div class="MuiAvatar-root MuiAvatar-circle MuiAvatar-colorDefault" id="logo">
+            <a href="/review-tool-home">
+                <img src="/src/assets/images/logo.png">
+            </a>
+        </div>
+        <h6 class="MuiTypography-root MuiTypography-h6 MuiTypography-colorInherit"><a href="/ghg-locator">GHG Review Tools</a> • Locator</h6>
+    </div>
+</div>
+<div id="container" class="tallest">
+    <div class="MuiPaper-root section MuiPaper-elevation2 MuiPaper-rounded">
+      <div class="controls">
+        <select class="form-multi-select" multiple data-coreui-search="true">
+            <option value="0">Angular</option>
+            <option value="1" disabled>Bootstrap</option>
+            <option value="2">React.js</option>
+            <option value="3">Vue.js</option>
+            <optgroup label="backend">
+              <option value="4" disabled>Django</option>
+              <option value="5">Laravel</option>
+              <option value="6">Node.js</option>
+            </optgroup>
+          </select>
+          <div class="row clearfix" style="width: 98%;">
+              <div class="col-lg-2 col-md-6">
+                <div class="form-group">          
+                      <label>Party</label>        
+                      <br>
+                      <select class="form-control js-example-basic-single" style="width:100%;" id="PartyID"
+                      formControlName="PartyID">
+                          <option value="9999">Annex I</option>
+                          <option *ngFor="let obj of objClsPartyList" value={{obj.value}}>{{obj.text}}</option>
+                      </select> 
+                </div>
+              </div>
+          </div>
+      </div>
+  </div>
+</div>      
